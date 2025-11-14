@@ -1,10 +1,9 @@
-// data/tools.ts
-
 import { Category, Tool } from '@/types/interfaces';
 import {
   Code,
   Palette,
   Briefcase,
+  Search,
   Zap,
   Video,
   BookOpen,
@@ -16,12 +15,15 @@ import {
   Users,
   Presentation,
   Lightbulb,
+  Music,
+  Newspaper,
+  Globe,
   Mail,
+  Play,
 } from 'lucide-react';
 
 // --- 1. MACRO AREA DATA (MAIN MENU) ---
 
-// I define the main categories for my toolkit. Each category has an ID, name, icon, and a color class for styling.
 export const CATEGORIES: Category[] = [
   { id: 'all', name: 'All Categories', icon: Zap, colorClass: 'text-gray-600 border-gray-600' },
   { id: 'ai-chatbots', name: 'AI Chatbots & Text Generation', icon: MessageCircle, colorClass: 'text-blue-600 border-blue-600' },
@@ -38,11 +40,17 @@ export const CATEGORIES: Category[] = [
   { id: 'ai-spreadsheet', name: 'AI Spreadsheet Tools', icon: Layout, colorClass: 'text-lime-600 border-lime-600' },
   { id: 'ai-scheduling', name: 'AI Scheduling & Calendars', icon: Calendar, colorClass: 'text-violet-600 border-violet-600' },
   { id: 'ai-data-vis', name: 'AI Data Visualization', icon: BarChart, colorClass: 'text-rose-600 border-rose-600' },
+  { id: 'ai-youtube', name: 'AI YouTube Tools', icon: Play, colorClass: 'text-red-700 border-red-700' },
+  { id: 'ai-music', name: 'AI Music Generation', icon: Music, colorClass: 'text-indigo-700 border-indigo-700' },
+  { id: 'ai-seo', name: 'AI SEO Tools', icon: Search, colorClass: 'text-green-700 border-green-700' },
+  { id: 'ai-sales', name: 'AI Sales Tools', icon: Users, colorClass: 'text-orange-700 border-orange-700' },
+  { id: 'ai-daily-life', name: 'AI for Daily Life', icon: Globe, colorClass: 'text-gray-700 border-gray-700' },
+  { id: 'ai-writing', name: 'AI Writing Tools', icon: Newspaper, colorClass: 'text-cyan-700 border-cyan-700' },
+  { id: 'ai-email-marketing', name: 'AI Email Marketing', icon: Mail, colorClass: 'text-teal-700 border-teal-700' },
 ];
 
 // --- 2. TOOL DATA ---
 
-// This array contains all my digital tools, categorized and detailed.
 export const INITIAL_TOOLS: Tool[] = [
   // --- EXISTING TOOLS (UPDATED WITH NEW DATA) ---
   {
@@ -85,7 +93,7 @@ export const INITIAL_TOOLS: Tool[] = [
     id: 5,
     name: 'Ahrefs',
     description: 'Comprehensive SEO tool suite for backlink analysis, keyword research, and competitor monitoring.',
-    categoryId: 'ai-business',
+    categoryId: 'ai-seo',
     link: 'https://ahrefs.com/',
     tags: ['Paid', 'Competitor Analysis', 'Keyword Research'],
     logoUrl: 'https://placehold.co/40x40/FF5454/FFFFFF?text=A',
@@ -213,10 +221,19 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['Freemium', 'Marketing', 'Ad Creatives'],
     logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=SD',
   },
+  {
+    id: 19,
+    name: 'Kora',
+    description: 'AI-powered tool for generating surreal and imaginative images and videos from text prompts.',
+    categoryId: 'ai-design',
+    link: 'https://kora.ai/',
+    tags: ['Freemium', 'Surreal Images', 'Video Generation'],
+    logoUrl: 'https://placehold.co/40x40/FF6B6B/FFFFFF?text=K',
+  },
 
   // AI Video Generation & Editing
   {
-    id: 19,
+    id: 20,
     name: 'Descript',
     description: 'All-in-one video and podcast editor that transcribes and edits media like a document.',
     categoryId: 'ai-video',
@@ -225,7 +242,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/4A90E2/FFFFFF?text=Ds',
   },
   {
-    id: 20,
+    id: 21,
     name: '2short.AI',
     description: 'AI tool that automatically creates short-form videos from long-form content.',
     categoryId: 'ai-video',
@@ -234,7 +251,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/1F2937/FFFFFF?text=2S',
   },
   {
-    id: 21,
+    id: 22,
     name: 'Pictory',
     description: 'AI video generator that turns scripts, articles, or blogs into engaging videos.',
     categoryId: 'ai-video',
@@ -243,7 +260,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/8B5CF6/FFFFFF?text=PI',
   },
   {
-    id: 22,
+    id: 23,
     name: 'Synthesia',
     description: 'AI video generation platform using realistic avatars from text.',
     categoryId: 'ai-video',
@@ -252,7 +269,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/1B1D1F/FFFFFF?text=Syn',
   },
   {
-    id: 23,
+    id: 24,
     name: 'Luma AI',
     description: 'Platform for creating realistic 3D captures and videos using NeRF (Neural Radiance Fields).',
     categoryId: 'ai-video',
@@ -261,7 +278,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/6E3DFF/FFFFFF?text=LA',
   },
   {
-    id: 24,
+    id: 25,
     name: 'Syllaby',
     description: 'AI tool for generating short-form video scripts optimized for platforms like TikTok and Instagram Reels.',
     categoryId: 'ai-video',
@@ -270,7 +287,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=SY',
   },
   {
-    id: 25,
+    id: 26,
     name: 'VEO 3.1',
     description: 'Google’s state-of-the-art video generation model for creating high-quality, cinematic clips.',
     categoryId: 'ai-video',
@@ -279,7 +296,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/EA580C/FFFFFF?text=VEO',
   },
   {
-    id: 26,
+    id: 27,
     name: 'Invideo AI',
     description: 'AI-powered video creation platform for marketers and content creators.',
     categoryId: 'ai-video',
@@ -288,7 +305,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/8B5CF6/FFFFFF?text=IV',
   },
   {
-    id: 27,
+    id: 28,
     name: 'Kling',
     description: 'Chinese AI video generator capable of producing high-resolution, dynamic scenes from text prompts.',
     categoryId: 'ai-video',
@@ -296,10 +313,19 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['Paid', 'High Resolution', 'Dynamic Scenes'],
     logoUrl: 'https://placehold.co/40x40/000000/FFFFFF?text=KL',
   },
+  {
+    id: 29,
+    name: 'Flow',
+    description: 'All-in-one creative space for AI-powered image, video, and design generation.',
+    categoryId: 'ai-design',
+    link: 'https://flow.ai/',
+    tags: ['Freemium', 'All-in-One', 'Creative Suite'],
+    logoUrl: 'https://placehold.co/40x40/000000/FFFFFF?text=F',
+  },
 
   // AI Content Creation
   {
-    id: 28,
+    id: 30,
     name: 'Writesonic',
     description: 'AI writing assistant for creating blog posts, ads, product descriptions, and landing pages.',
     categoryId: 'ai-content',
@@ -308,7 +334,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/3E3E6E/FFFFFF?text=WS',
   },
   {
-    id: 29,
+    id: 31,
     name: 'Rytr',
     description: 'AI writing assistant helping to create high-quality content in minutes for various use cases.',
     categoryId: 'ai-content',
@@ -317,7 +343,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/F58529/FFFFFF?text=R',
   },
   {
-    id: 30,
+    id: 32,
     name: 'Jasper',
     description: 'Powerful AI content platform specialized in brand-aligned content generation.',
     categoryId: 'ai-content',
@@ -326,7 +352,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/FF0000/FFFFFF?text=J',
   },
   {
-    id: 31,
+    id: 33,
     name: 'Synthesia',
     description: 'AI video generation platform using realistic avatars from text.',
     categoryId: 'ai-content',
@@ -335,7 +361,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/1B1D1F/FFFFFF?text=Syn',
   },
   {
-    id: 32,
+    id: 34,
     name: 'Tweet Hunter',
     description: 'AI tool for finding viral tweets and generating engaging Twitter/X content.',
     categoryId: 'ai-content',
@@ -344,7 +370,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/1DA1F2/FFFFFF?text=TH',
   },
   {
-    id: 33,
+    id: 35,
     name: 'Taplio',
     description: 'AI-powered LinkedIn content generator for growing your professional presence.',
     categoryId: 'ai-content',
@@ -352,10 +378,181 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['Freemium', 'LinkedIn', 'Professional Growth'],
     logoUrl: 'https://placehold.co/40x40/0A66C2/FFFFFF?text=T',
   },
+  {
+    id: 36,
+    name: 'Narrato',
+    description: 'End-to-end AI content workflow platform for planning, creating, and publishing content.',
+    categoryId: 'ai-content',
+    link: 'https://narrato.io/',
+    tags: ['Freemium', 'Content Workflow', 'Publishing'],
+    logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=N',
+  },
+  {
+    id: 37,
+    name: 'MarketMuse',
+    description: 'AI-powered SEO topic modeling and content strategy tool for enterprise teams.',
+    categoryId: 'ai-seo',
+    link: 'https://marketmuse.com/',
+    tags: ['Paid', 'Topic Modeling', 'SEO Strategy'],
+    logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=MM',
+  },
+  {
+    id: 38,
+    name: 'Clearscope',
+    description: 'AI content optimization tool that helps you write content that ranks higher in search engines.',
+    categoryId: 'ai-seo',
+    link: 'https://clearscope.io/',
+    tags: ['Paid', 'Content Optimization', 'SEO'],
+    logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=CS',
+  },
+  {
+    id: 39,
+    name: 'Frase',
+    description: 'AI content research and briefs tool that helps you create content based on top-performing results.',
+    categoryId: 'ai-content',
+    link: 'https://www.frase.io/',
+    tags: ['Freemium', 'Content Research', 'Briefs'],
+    logoUrl: 'https://placehold.co/40x40/1F2937/FFFFFF?text=F',
+  },
+  {
+    id: 40,
+    name: 'Scalenut',
+    description: 'AI-powered SEO article automation tool for generating high-quality, SEO-optimized content.',
+    categoryId: 'ai-content',
+    link: 'https://scalenut.com/',
+    tags: ['Freemium', 'SEO Automation', 'Articles'],
+    logoUrl: 'https://placehold.co/40x40/000000/FFFFFF?text=S',
+  },
+  {
+    id: 41,
+    name: 'Outranking',
+    description: 'AI tool that generates rank-optimized content drafts based on SERP analysis.',
+    categoryId: 'ai-seo',
+    link: 'https://outranking.io/',
+    tags: ['Paid', 'Rank Optimization', 'SERP Analysis'],
+    logoUrl: 'https://placehold.co/40x40/FF6B6B/FFFFFF?text=O',
+  },
+  {
+    id: 42,
+    name: 'NeuronWriter',
+    description: 'NLP-powered writing tool for creating high-quality, SEO-friendly content.',
+    categoryId: 'ai-content',
+    link: 'https://neuronwriter.com/',
+    tags: ['Freemium', 'NLP Writing', 'SEO'],
+    logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=NW',
+  },
+  {
+    id: 43,
+    name: 'Writer.com',
+    description: 'Brand voice content checker and AI writing assistant for consistent, on-brand content.',
+    categoryId: 'ai-content',
+    link: 'https://writer.com/',
+    tags: ['Freemium', 'Brand Voice', 'Consistency'],
+    logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=W',
+  },
+  {
+    id: 44,
+    name: 'Copy.ai',
+    description: 'AI platform for generating marketing copy, sales emails, and blog content with an emphasis on conversion.',
+    categoryId: 'ai-content',
+    link: 'https://www.copy.ai/',
+    tags: ['Freemium', 'Copywriting', 'Marketing'],
+    logoUrl: 'https://placehold.co/40x40/4CAF50/FFFFFF?text=CA',
+  },
+  {
+    id: 45,
+    name: 'ContentShake',
+    description: 'AI tool for generating SEO-optimized blog content and articles.',
+    categoryId: 'ai-content',
+    link: 'https://contentshake.com/',
+    tags: ['Freemium', 'SEO Blog Writing', 'Articles'],
+    logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=CS',
+  },
+  {
+    id: 46,
+    name: 'LongShot',
+    description: 'Research-backed long-form AI writing tool for creating in-depth, authoritative content.',
+    categoryId: 'ai-content',
+    link: 'https://longshot.ai/',
+    tags: ['Freemium', 'Long-Form Writing', 'Research'],
+    logoUrl: 'https://placehold.co/40x40/1F2937/FFFFFF?text=LS',
+  },
+  {
+    id: 47,
+    name: 'Ink',
+    description: 'SEO-focused AI writing platform for creating content that ranks well in search engines.',
+    categoryId: 'ai-seo',
+    link: 'https://inkforall.com/',
+    tags: ['Freemium', 'SEO Writing', 'Ranking'],
+    logoUrl: 'https://placehold.co/40x40/000000/FFFFFF?text=I',
+  },
+  {
+    id: 48,
+    name: 'Cohesive',
+    description: 'AI tool for editing, enhancing, and rewriting content to improve clarity and impact.',
+    categoryId: 'ai-content',
+    link: 'https://cohesive.app/',
+    tags: ['Freemium', 'Editing', 'Rewriting'],
+    logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=C',
+  },
+  {
+    id: 49,
+    name: 'SEO GPT',
+    description: 'AI tool for optimizing on-page content to improve search engine rankings.',
+    categoryId: 'ai-seo',
+    link: 'https://seo.gpt.com/',
+    tags: ['Freemium', 'On-Page SEO', 'Optimization'],
+    logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=SG',
+  },
+  {
+    id: 50,
+    name: 'GrowthBar',
+    description: 'Keyword and blog AI tool for discovering profitable keywords and creating content briefs.',
+    categoryId: 'ai-seo',
+    link: 'https://growthbar.com/',
+    tags: ['Freemium', 'Keyword Research', 'Content Briefs'],
+    logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=GB',
+  },
+  {
+    id: 51,
+    name: 'Topic',
+    description: 'AI content brief generation tool for creating detailed briefs based on top-performing content.',
+    categoryId: 'ai-content',
+    link: 'https://topic.com/',
+    tags: ['Freemium', 'Content Briefs', 'Research'],
+    logoUrl: 'https://placehold.co/40x40/1F2937/FFFFFF?text=T',
+  },
+  {
+    id: 52,
+    name: 'SurferSEO',
+    description: 'Content optimization tool that uses AI to suggest how to improve content for better Google ranking.',
+    categoryId: 'ai-seo',
+    link: 'https://surferseo.com/',
+    tags: ['Paid', 'Content Optimization', 'SEO'],
+    logoUrl: 'https://placehold.co/40x40/2563EB/FFFFFF?text=SS',
+  },
+  {
+    id: 53,
+    name: 'Copylime',
+    description: 'AI tool for content idea brainstorming and generating creative copy variations.',
+    categoryId: 'ai-content',
+    link: 'https://copylime.com/',
+    tags: ['Freemium', 'Brainstorming', 'Copy Variations'],
+    logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=CL',
+  },
+  {
+    id: 54,
+    name: 'Compose.ai',
+    description: 'AI writing tool for enhancing writing speed and productivity.',
+    categoryId: 'ai-content',
+    link: 'https://compose.ai/',
+    tags: ['Freemium', 'Writing Speed', 'Productivity'],
+    logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=C',
+  },
 
   // AI Productivity & Scheduling
   {
-    id: 34,
+    id: 55,
     name: 'Perplexity',
     description: 'AI answer engine that provides precise answers with source citations.',
     categoryId: 'ai-productivity',
@@ -364,7 +561,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/1A1A1A/FFFFFF?text=P',
   },
   {
-    id: 35,
+    id: 56,
     name: 'Taskade',
     description: 'AI-powered productivity and collaboration platform for tasks, notes, and project management.',
     categoryId: 'ai-productivity',
@@ -373,7 +570,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/7356F1/FFFFFF?text=Tsk',
   },
   {
-    id: 36,
+    id: 57,
     name: 'Fathom',
     description: 'AI meeting assistant that records, transcribes, and summarizes meetings.',
     categoryId: 'ai-meeting-notes',
@@ -382,7 +579,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/198754/FFFFFF?text=F',
   },
   {
-    id: 37,
+    id: 58,
     name: 'Calendly',
     description: 'Scheduling tool that lets others book time on your calendar without back-and-forth emails.',
     categoryId: 'ai-scheduling',
@@ -391,7 +588,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/4F46E5/FFFFFF?text=CL',
   },
   {
-    id: 38,
+    id: 59,
     name: 'Koalendar',
     description: 'AI-powered scheduling assistant that integrates with your calendar to find optimal meeting times.',
     categoryId: 'ai-scheduling',
@@ -400,7 +597,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/059669/FFFFFF?text=KO',
   },
   {
-    id: 39,
+    id: 60,
     name: 'Motion',
     description: 'AI calendar and task manager that automatically schedules your day for maximum productivity.',
     categoryId: 'ai-scheduling',
@@ -409,7 +606,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/F59E0B/FFFFFF?text=M',
   },
   {
-    id: 40,
+    id: 61,
     name: 'Trevor AI',
     description: 'AI scheduling assistant for teams, automating meeting coordination across time zones.',
     categoryId: 'ai-scheduling',
@@ -420,7 +617,7 @@ export const INITIAL_TOOLS: Tool[] = [
 
   // AI for Business & Marketing
   {
-    id: 41,
+    id: 62,
     name: 'Rationale',
     description: 'AI tool for conducting market research and competitive analysis.',
     categoryId: 'ai-business',
@@ -429,7 +626,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=R',
   },
   {
-    id: 42,
+    id: 63,
     name: 'Mixo',
     description: 'AI-powered platform for building and launching websites and landing pages in minutes.',
     categoryId: 'ai-business',
@@ -438,25 +635,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=M',
   },
   {
-    id: 43,
-    name: 'SurferSEO',
-    description: 'Content optimization tool that uses AI to suggest how to improve content for better Google ranking.',
-    categoryId: 'ai-business',
-    link: 'https://surferseo.com/',
-    tags: ['Paid', 'Content Optimization', 'SEO'],
-    logoUrl: 'https://placehold.co/40x40/2563EB/FFFFFF?text=SS',
-  },
-  {
-    id: 44,
-    name: 'Copy.ai',
-    description: 'AI platform for generating marketing copy, sales emails, and blog content with an emphasis on conversion.',
-    categoryId: 'ai-business',
-    link: 'https://www.copy.ai/',
-    tags: ['Freemium', 'Copywriting', 'Marketing'],
-    logoUrl: 'https://placehold.co/40x40/4CAF50/FFFFFF?text=CA',
-  },
-  {
-    id: 45,
+    id: 64,
     name: 'Grammarly',
     description: 'AI writing assistant that helps improve grammar, spelling, clarity, and tone in your writing.',
     categoryId: 'ai-productivity',
@@ -465,7 +644,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/50C878/FFFFFF?text=G',
   },
   {
-    id: 46,
+    id: 65,
     name: 'Eightify',
     description: 'AI tool that summarizes YouTube videos into key points and actionable insights.',
     categoryId: 'ai-productivity',
@@ -476,7 +655,7 @@ export const INITIAL_TOOLS: Tool[] = [
 
   // AI Presentations & Slides
   {
-    id: 47,
+    id: 66,
     name: 'Gamma',
     description: 'AI-powered presentation software that transforms notes and ideas into engaging decks.',
     categoryId: 'ai-presentations',
@@ -485,7 +664,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/F9D54A/000000?text=Ga',
   },
   {
-    id: 48,
+    id: 67,
     name: 'Tome',
     description: 'Generative storytelling tool for creating dynamic and interactive presentations.',
     categoryId: 'ai-presentations',
@@ -494,7 +673,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/B331A4/FFFFFF?text=T',
   },
   {
-    id: 49,
+    id: 68,
     name: 'SlidesAI',
     description: 'AI tool that generates entire slide decks from a simple text prompt or outline.',
     categoryId: 'ai-presentations',
@@ -503,7 +682,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/000000/FFFFFF?text=SA',
   },
   {
-    id: 50,
+    id: 69,
     name: 'Pitch',
     description: 'Collaborative presentation software with AI-powered design suggestions and templates.',
     categoryId: 'ai-presentations',
@@ -512,7 +691,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/1F2937/FFFFFF?text=P',
   },
   {
-    id: 51,
+    id: 70,
     name: 'Decktopus',
     description: 'AI-powered presentation builder that creates slides based on your input and audience.',
     categoryId: 'ai-presentations',
@@ -521,7 +700,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=D',
   },
   {
-    id: 52,
+    id: 71,
     name: 'PopAI',
     description: 'AI assistant for creating presentations, reports, and documents with smart formatting.',
     categoryId: 'ai-presentations',
@@ -532,7 +711,7 @@ export const INITIAL_TOOLS: Tool[] = [
 
   // AI Research & Knowledge
   {
-    id: 53,
+    id: 72,
     name: 'Consensus',
     description: 'AI search engine that finds answers from scientific research papers.',
     categoryId: 'ai-research',
@@ -541,7 +720,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/000000/FFFFFF?text=C',
   },
   {
-    id: 54,
+    id: 73,
     name: 'ChatPDF',
     description: 'AI tool that lets you chat with any PDF document to extract information and summarize content.',
     categoryId: 'ai-research',
@@ -550,7 +729,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/FF0000/FFFFFF?text=CP',
   },
   {
-    id: 55,
+    id: 74,
     name: 'Supertools',
     description: 'Curated collection of AI tools and resources for researchers and professionals.',
     categoryId: 'ai-research',
@@ -561,7 +740,7 @@ export const INITIAL_TOOLS: Tool[] = [
 
   // AI Coding Assistance
   {
-    id: 56,
+    id: 75,
     name: 'AskCodi',
     description: 'AI coding assistant that helps write, debug, and explain code in multiple programming languages.',
     categoryId: 'ai-coding',
@@ -570,7 +749,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=AC',
   },
   {
-    id: 57,
+    id: 76,
     name: 'Codiga',
     description: 'AI-powered code review and security tool for developers.',
     categoryId: 'ai-coding',
@@ -579,7 +758,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=CD',
   },
   {
-    id: 58,
+    id: 77,
     name: 'Cursor',
     description: 'AI-native code editor designed for pair programming with large language models.',
     categoryId: 'ai-coding',
@@ -588,7 +767,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/1F2937/FFFFFF?text=CU',
   },
   {
-    id: 59,
+    id: 78,
     name: 'Qodo',
     description: 'AI tool for generating documentation and API references from your codebase.',
     categoryId: 'ai-coding',
@@ -597,7 +776,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=Q',
   },
   {
-    id: 60,
+    id: 79,
     name: 'Replit',
     description: 'Cloud-based IDE with built-in AI assistance for learning and developing code.',
     categoryId: 'ai-coding',
@@ -608,7 +787,7 @@ export const INITIAL_TOOLS: Tool[] = [
 
   // AI Email Assistance
   {
-    id: 61,
+    id: 80,
     name: 'Clippit.AI',
     description: 'AI email assistant that drafts, schedules, and optimizes your email communications.',
     categoryId: 'ai-email',
@@ -617,7 +796,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=CL',
   },
   {
-    id: 62,
+    id: 81,
     name: 'Friday',
     description: 'AI email assistant that helps you manage your inbox, draft replies, and prioritize messages.',
     categoryId: 'ai-email',
@@ -626,7 +805,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=F',
   },
   {
-    id: 63,
+    id: 82,
     name: 'Mailmaestro',
     description: 'AI tool for optimizing email subject lines and body content for higher open rates.',
     categoryId: 'ai-email',
@@ -635,7 +814,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=MM',
   },
   {
-    id: 64,
+    id: 83,
     name: 'Shortwave',
     description: 'AI-powered email client that helps you read, reply, and organize your inbox faster.',
     categoryId: 'ai-email',
@@ -644,7 +823,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/1F2937/FFFFFF?text=SW',
   },
   {
-    id: 65,
+    id: 84,
     name: 'Superhuman',
     description: 'Ultra-fast email client with AI-powered features for managing your inbox efficiently.',
     categoryId: 'ai-email',
@@ -655,7 +834,7 @@ export const INITIAL_TOOLS: Tool[] = [
 
   // AI Spreadsheet Tools
   {
-    id: 66,
+    id: 85,
     name: 'Bricks',
     description: 'AI spreadsheet tool that automates data entry, calculations, and reporting.',
     categoryId: 'ai-spreadsheet',
@@ -664,7 +843,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=B',
   },
   {
-    id: 67,
+    id: 86,
     name: 'Formula Bot',
     description: 'AI assistant for generating Excel and Google Sheets formulas based on natural language queries.',
     categoryId: 'ai-spreadsheet',
@@ -673,7 +852,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=FB',
   },
   {
-    id: 68,
+    id: 87,
     name: 'Gigasheet',
     description: 'AI-powered spreadsheet tool for analyzing massive datasets without code.',
     categoryId: 'ai-spreadsheet',
@@ -682,7 +861,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=GS',
   },
   {
-    id: 69,
+    id: 88,
     name: 'Rows AI',
     description: 'Collaborative spreadsheet with built-in AI functions for data analysis and automation.',
     categoryId: 'ai-spreadsheet',
@@ -691,7 +870,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/1F2937/FFFFFF?text=R',
   },
   {
-    id: 70,
+    id: 89,
     name: 'Sheet AI',
     description: 'AI assistant for Google Sheets that helps with formula creation, data cleaning, and analysis.',
     categoryId: 'ai-spreadsheet',
@@ -702,7 +881,7 @@ export const INITIAL_TOOLS: Tool[] = [
 
   // AI Data Visualization
   {
-    id: 71,
+    id: 90,
     name: 'Deckpit',
     description: 'AI-powered tool for creating interactive dashboards and visualizations from your data.',
     categoryId: 'ai-data-vis',
@@ -711,7 +890,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=D',
   },
   {
-    id: 72,
+    id: 91,
     name: 'Flourish',
     description: 'Easy-to-use platform for creating beautiful, interactive charts and maps with AI assistance.',
     categoryId: 'ai-data-vis',
@@ -720,7 +899,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=F',
   },
   {
-    id: 73,
+    id: 92,
     name: 'Julius',
     description: 'AI data visualization tool that automatically suggests the best chart types for your dataset.',
     categoryId: 'ai-data-vis',
@@ -729,7 +908,7 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=J',
   },
   {
-    id: 74,
+    id: 93,
     name: 'Visme',
     description: 'Design tool for creating infographics, presentations, and data visualizations with AI templates.',
     categoryId: 'ai-data-vis',
@@ -738,12 +917,397 @@ export const INITIAL_TOOLS: Tool[] = [
     logoUrl: 'https://placehold.co/40x40/1F2937/FFFFFF?text=V',
   },
   {
-    id: 75,
+    id: 94,
     name: 'Zing Data',
     description: 'AI-powered platform for transforming raw data into insightful visual reports and dashboards.',
     categoryId: 'ai-data-vis',
     link: 'https://zingdata.com/',
     tags: ['Freemium', 'Data Reports', 'Dashboards'],
     logoUrl: 'https://placehold.co/40x40/000000/FFFFFF?text=Z',
+  },
+
+  // AI YouTube Tools
+  {
+    id: 95,
+    name: 'Vidyo',
+    description: 'AI tool for creating and editing YouTube videos with automated captions and thumbnails.',
+    categoryId: 'ai-youtube',
+    link: 'https://vidyo.ai/',
+    tags: ['Freemium', 'YouTube Editing', 'Thumbnails'],
+    logoUrl: 'https://placehold.co/40x40/FF0000/FFFFFF?text=V',
+  },
+  {
+    id: 96,
+    name: 'Wondercraft AI',
+    description: 'AI tool for creating podcasts and YouTube videos from text scripts.',
+    categoryId: 'ai-youtube',
+    link: 'https://wondercraft.ai/',
+    tags: ['Freemium', 'Podcast Creation', 'Script to Video'],
+    logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=W',
+  },
+  {
+    id: 97,
+    name: 'Vocod AI',
+    description: 'AI tool for generating voiceovers and audio for YouTube videos.',
+    categoryId: 'ai-youtube',
+    link: 'https://vocod.ai/',
+    tags: ['Freemium', 'Voiceovers', 'Audio Generation'],
+    logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=V',
+  },
+  {
+    id: 98,
+    name: 'Pictory',
+    description: 'AI video generator that turns scripts, articles, or blogs into engaging videos.',
+    categoryId: 'ai-youtube',
+    link: 'https://pictory.ai/',
+    tags: ['Freemium', 'Script to Video', 'Marketing'],
+    logoUrl: 'https://placehold.co/40x40/8B5CF6/FFFFFF?text=PI',
+  },
+  {
+    id: 99,
+    name: 'Steve AI',
+    description: 'AI video creation platform for making professional-looking videos for YouTube and social media.',
+    categoryId: 'ai-youtube',
+    link: 'https://steve.ai/',
+    tags: ['Freemium', 'Professional Videos', 'Social Media'],
+    logoUrl: 'https://placehold.co/40x40/1F2937/FFFFFF?text=S',
+  },
+
+  // AI Chrome Extensions
+  {
+    id: 100,
+    name: 'Fireflies AI',
+    description: 'Chrome extension that records, transcribes, and summarizes meetings directly in your browser.',
+    categoryId: 'ai-chrome-extensions',
+    link: 'https://fireflies.ai/',
+    tags: ['Freemium', 'Meeting Notes', 'Transcription'],
+    logoUrl: 'https://placehold.co/40x40/198754/FFFFFF?text=F',
+  },
+  {
+    id: 101,
+    name: 'Speak AI',
+    description: 'Chrome extension for generating AI-powered summaries and insights from web pages and PDFs.',
+    categoryId: 'ai-chrome-extensions',
+    link: 'https://speak.ai/',
+    tags: ['Freemium', 'Web Summaries', 'Insights'],
+    logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=S',
+  },
+  {
+    id: 102,
+    name: 'Otter.ai',
+    description: 'Chrome extension for real-time transcription and note-taking during meetings and calls.',
+    categoryId: 'ai-chrome-extensions',
+    link: 'https://otter.ai/',
+    tags: ['Freemium', 'Transcription', 'Note-Taking'],
+    logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=O',
+  },
+  {
+    id: 103,
+    name: 'Glizmo',
+    description: 'AI-powered Chrome extension for creating interactive quizzes and assessments from any webpage.',
+    categoryId: 'ai-chrome-extensions',
+    link: 'https://glizmo.com/',
+    tags: ['Freemium', 'Quizzes', 'Assessments'],
+    logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=G',
+  },
+  {
+    id: 104,
+    name: 'NoteNinjaar',
+    description: 'Chrome extension for AI-powered note-taking and organization while browsing.',
+    categoryId: 'ai-chrome-extensions',
+    link: 'https://noteninjaar.com/',
+    tags: ['Freemium', 'Note-Taking', 'Organization'],
+    logoUrl: 'https://placehold.co/40x40/1F2937/FFFFFF?text=N',
+  },
+
+  // AI Social Media Management
+  {
+    id: 105,
+    name: 'Buffer',
+    description: 'AI-powered social media management tool for scheduling, analytics, and engagement.',
+    categoryId: 'ai-social-media',
+    link: 'https://buffer.com/',
+    tags: ['Freemium', 'Scheduling', 'Analytics'],
+    logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=B',
+  },
+  {
+    id: 106,
+    name: 'Hootsuite',
+    description: 'Comprehensive social media management platform with AI-driven content suggestions and scheduling.',
+    categoryId: 'ai-social-media',
+    link: 'https://hootsuite.com/',
+    tags: ['Paid', 'Content Suggestions', 'Scheduling'],
+    logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=H',
+  },
+  {
+    id: 107,
+    name: 'Ocoya',
+    description: 'AI tool for creating and scheduling social media content across multiple platforms.',
+    categoryId: 'ai-social-media',
+    link: 'https://ocoya.com/',
+    tags: ['Freemium', 'Content Creation', 'Multi-Platform'],
+    logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=O',
+  },
+  {
+    id: 108,
+    name: 'Rapidly',
+    description: 'AI-powered social media content generator for creating posts, captions, and hashtags.',
+    categoryId: 'ai-social-media',
+    link: 'https://rapidly.ai/',
+    tags: ['Freemium', 'Content Generation', 'Hashtags'],
+    logoUrl: 'https://placehold.co/40x40/1F2937/FFFFFF?text=R',
+  },
+  {
+    id: 109,
+    name: 'Canva',
+    description: 'Design platform that allows creating graphics, presentations, and social media content (includes AI features).',
+    categoryId: 'ai-social-media',
+    link: 'https://www.canva.com/',
+    tags: ['Freemium', 'Graphic Design', 'Social Media'],
+    logoUrl: 'https://placehold.co/40x40/00C4CC/FFFFFF?text=Cn',
+  },
+
+  // AI Music Generation
+  {
+    id: 110,
+    name: 'Alva',
+    description: 'AI music generator that creates original tracks based on your mood, genre, and tempo preferences.',
+    categoryId: 'ai-music',
+    link: 'https://alva.ai/',
+    tags: ['Freemium', 'Original Tracks', 'Mood-Based'],
+    logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=A',
+  },
+  {
+    id: 111,
+    name: 'Soundful',
+    description: 'AI music creation platform for generating royalty-free background music for videos and podcasts.',
+    categoryId: 'ai-music',
+    link: 'https://soundful.com/',
+    tags: ['Freemium', 'Royalty-Free', 'Background Music'],
+    logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=S',
+  },
+  {
+    id: 112,
+    name: 'Beatoven AI',
+    description: 'AI tool for composing music tracks tailored to your video or project needs.',
+    categoryId: 'ai-music',
+    link: 'https://beatoven.ai/',
+    tags: ['Freemium', 'Custom Composition', 'Video Sync'],
+    logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=B',
+  },
+
+  // AI Sales Tools
+  {
+    id: 113,
+    name: 'Writerly',
+    description: 'AI tool for generating personalized sales emails and outreach messages.',
+    categoryId: 'ai-sales',
+    link: 'https://writerly.ai/',
+    tags: ['Freemium', 'Sales Emails', 'Personalization'],
+    logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=W',
+  },
+  {
+    id: 114,
+    name: 'Copymatic',
+    description: 'AI-powered copywriting tool for generating high-converting sales copy and landing pages.',
+    categoryId: 'ai-sales',
+    link: 'https://copymatic.ai/',
+    tags: ['Freemium', 'Sales Copy', 'Landing Pages'],
+    logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=C',
+  },
+  {
+    id: 115,
+    name: 'CoWrite AI',
+    description: 'AI tool for co-writing sales proposals, contracts, and business documents with your team.',
+    categoryId: 'ai-sales',
+    link: 'https://cowrite.ai/',
+    tags: ['Freemium', 'Proposal Writing', 'Collaboration'],
+    logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=C',
+  },
+  {
+    id: 116,
+    name: 'Zinc',
+    description: 'AI tool for generating and optimizing sales scripts and call flows.',
+    categoryId: 'ai-sales',
+    link: 'https://zinc.com/',
+    tags: ['Freemium', 'Sales Scripts', 'Call Flows'],
+    logoUrl: 'https://placehold.co/40x40/1F2937/FFFFFF?text=Z',
+  },
+  {
+    id: 117,
+    name: 'Zinc Editor',
+    description: 'AI-powered editor for refining and improving your sales copy and messaging.',
+    categoryId: 'ai-sales',
+    link: 'https://zinceditor.com/',
+    tags: ['Freemium', 'Copy Editing', 'Sales Messaging'],
+    logoUrl: 'https://placehold.co/40x40/000000/FFFFFF?text=ZE',
+  },
+  {
+    id: 118,
+    name: 'Quillbot',
+    description: 'AI writing assistant for paraphrasing, summarizing, and improving sales and marketing content.',
+    categoryId: 'ai-sales',
+    link: 'https://quillbot.com/',
+    tags: ['Freemium', 'Paraphrasing', 'Content Improvement'],
+    logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=Q',
+  },
+
+  // AI Daily Life Tools
+  {
+    id: 119,
+    name: 'SpellAI',
+    description: 'AI tool for helping with daily tasks like grocery lists, meal planning, and reminders.',
+    categoryId: 'ai-daily-life',
+    link: 'https://spellai.com/',
+    tags: ['Freemium', 'Daily Tasks', 'Meal Planning'],
+    logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=S',
+  },
+  {
+    id: 120,
+    name: 'ELSA',
+    description: 'AI-powered English language tutor for improving pronunciation and speaking skills.',
+    categoryId: 'ai-daily-life',
+    link: 'https://elsa Speak.com/',
+    tags: ['Freemium', 'Language Learning', 'Pronunciation'],
+    logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=E',
+  },
+  {
+    id: 121,
+    name: 'Sibyl AI',
+    description: 'AI assistant for personal finance management, budgeting, and investment advice.',
+    categoryId: 'ai-daily-life',
+    link: 'https://sibyl.ai/',
+    tags: ['Freemium', 'Finance', 'Budgeting'],
+    logoUrl: 'https://placehold.co/40x40/1F2937/FFFFFF?text=S',
+  },
+  {
+    id: 122,
+    name: 'Notion AI',
+    description: 'AI-powered features within Notion for writing, summarizing, and organizing your personal and work life.',
+    categoryId: 'ai-daily-life',
+    link: 'https://www.notion.so/product/ai',
+    tags: ['Freemium', 'Writing', 'Organization'],
+    logoUrl: 'https://placehold.co/40x40/000000/FFFFFF?text=N',
+  },
+  {
+    id: 123,
+    name: 'Taskade',
+    description: 'AI-powered productivity and collaboration platform for tasks, notes, and project management.',
+    categoryId: 'ai-daily-life',
+    link: 'https://www.taskade.com/',
+    tags: ['Freemium', 'Project Management', 'Tasks'],
+    logoUrl: 'https://placehold.co/40x40/7356F1/FFFFFF?text=Tsk',
+  },
+
+  // AI Writing Tools
+  {
+    id: 124,
+    name: 'Copy.ai',
+    description: 'AI platform for generating marketing copy, sales emails, and blog content with an emphasis on conversion.',
+    categoryId: 'ai-writing',
+    link: 'https://www.copy.ai/',
+    tags: ['Freemium', 'Copywriting', 'Marketing'],
+    logoUrl: 'https://placehold.co/40x40/4CAF50/FFFFFF?text=CA',
+  },
+  {
+    id: 125,
+    name: 'Article Forge',
+    description: 'AI article writer that generates unique, SEO-optimized content for your website or blog.',
+    categoryId: 'ai-writing',
+    link: 'https://articleforge.com/',
+    tags: ['Paid', 'Article Writing', 'SEO'],
+    logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=AF',
+  },
+  {
+    id: 126,
+    name: 'Jasper',
+    description: 'Powerful AI content platform specialized in brand-aligned content generation.',
+    categoryId: 'ai-writing',
+    link: 'https://www.jasper.ai/',
+    tags: ['Paid', 'Content Strategy', 'Marketing'],
+    logoUrl: 'https://placehold.co/40x40/FF0000/FFFFFF?text=J',
+  },
+  {
+    id: 127,
+    name: 'Writesonic',
+    description: 'AI writing assistant for creating blog posts, ads, product descriptions, and landing pages.',
+    categoryId: 'ai-writing',
+    link: 'https://writesonic.com/',
+    tags: ['Freemium', 'Content Creation', 'SEO'],
+    logoUrl: 'https://placehold.co/40x40/3E3E6E/FFFFFF?text=WS',
+  },
+  {
+    id: 128,
+    name: 'Rytr',
+    description: 'AI writing assistant helping to create high-quality content in minutes for various use cases.',
+    categoryId: 'ai-writing',
+    link: 'https://rytr.me/',
+    tags: ['Freemium', 'Content Creation', 'Blogging'],
+    logoUrl: 'https://placehold.co/40x40/F58529/FFFFFF?text=R',
+  },
+  {
+    id: 129,
+    name: 'Jasper',
+    description: 'Powerful AI content platform specialized in brand-aligned content generation.',
+    categoryId: 'ai-writing',
+    link: 'https://www.jasper.ai/',
+    tags: ['Paid', 'Content Strategy', 'Marketing'],
+    logoUrl: 'https://placehold.co/40x40/FF0000/FFFFFF?text=J',
+  },
+  {
+    id: 130,
+    name: 'Jasper',
+    description: 'Powerful AI content platform specialized in brand-aligned content generation.',
+    categoryId: 'ai-writing',
+    link: 'https://www.jasper.ai/',
+    tags: ['Paid', 'Content Strategy', 'Marketing'],
+    logoUrl: 'https://placehold.co/40x40/FF0000/FFFFFF?text=J',
+  },
+
+  // AI Email Marketing
+  {
+    id: 131,
+    name: 'GrowNicheAI',
+    description: 'AI tool for generating personalized email campaigns for niche markets.',
+    categoryId: 'ai-email-marketing',
+    link: 'https://grownicheai.com/',
+    tags: ['Freemium', 'Personalized Campaigns', 'Niche Markets'],
+    logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=GN',
+  },
+  {
+    id: 132,
+    name: 'Growth Space',
+    description: 'AI-powered email marketing platform for automating campaigns and improving open rates.',
+    categoryId: 'ai-email-marketing',
+    link: 'https://growthsapce.com/',
+    tags: ['Freemium', 'Campaign Automation', 'Open Rates'],
+    logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=GS',
+  },
+  {
+    id: 133,
+    name: 'Mailchimp',
+    description: 'Popular email marketing platform with AI features for audience segmentation and campaign optimization.',
+    categoryId: 'ai-email-marketing',
+    link: 'https://mailchimp.com/',
+    tags: ['Freemium', 'Audience Segmentation', 'Campaign Optimization'],
+    logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=M',
+  },
+  {
+    id: 134,
+    name: 'Sendinblue',
+    description: 'AI-powered email marketing and SMS platform for small businesses and startups.',
+    categoryId: 'ai-email-marketing',
+    link: 'https://www.sendinblue.com/',
+    tags: ['Freemium', 'SMS Marketing', 'Small Business'],
+    logoUrl: 'https://placehold.co/40x40/1F2937/FFFFFF?text=S',
+  },
+  {
+    id: 135,
+    name: 'ActiveCampaign',
+    description: 'AI-driven email marketing and automation platform for personalized customer journeys.',
+    categoryId: 'ai-email-marketing',
+    link: 'https://www.activecampaign.com/',
+    tags: ['Paid', 'Automation', 'Personalization'],
+    logoUrl: 'https://placehold.co/40x40/000000/FFFFFF?text=AC',
   },
 ];
