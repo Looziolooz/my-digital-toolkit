@@ -1,14 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Aggiungi o modifica la sezione 'images'
+  // 1. Aggiungo 'output: export' per abilitare la static export (sostituisce il vecchio 'next export')
+  output: 'export',
+  
+  // 2. Mantengo la configurazione per le immagini esterne
   images: {
-    // Lista di hostname (domini) esterni da cui è permesso caricare le immagini
+    // Nota: Nel caso di output: 'export', le remotePatterns potrebbero non essere necessarie
+    // se non usi un CDN, ma le lascio per sicurezza.
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'placehold.co',
         port: '',
-        pathname: '/**', // Permette qualsiasi percorso su questo hostname
+        pathname: '/**', // This allows any path on this hostname
       },
     ],
   },
