@@ -53,6 +53,42 @@ export const CATEGORIES: Category[] = [
   { id: 'ai-email-marketing', name: 'AI Email Marketing', icon: Mail, colorClass: 'text-teal-700 border-teal-700' },
   { id: 'ai-chrome-extensions', name: 'AI Chrome Extensions', icon: Settings, colorClass: 'text-blue-700 border-blue-700' },
   { id: 'ai-social-media', name: 'AI Social Media Management', icon: Image, colorClass: 'text-pink-700 border-pink-700' },
+{
+  id: 'ai-pdf',
+  name: 'AI PDF Tools',
+  icon: FileText,
+  colorClass: 'text-amber-600 border-amber-600'
+},
+{
+  id: 'ai-excel',
+  name: 'AI Excel & Spreadsheet Tools',
+  icon: Layout,
+  colorClass: 'text-lime-600 border-lime-600'
+},
+{
+  id: 'ai-presentation-free',
+  name: 'AI Presentation Tools (Free)',
+  icon: Presentation,
+  colorClass: 'text-cyan-600 border-cyan-600'
+},
+{
+  id: 'ai-education',
+  name: 'AI Education & Learning',
+  icon: BookOpen,
+  colorClass: 'text-blue-700 border-blue-700'
+},
+{
+  id: 'ai-health',
+  name: 'AI Health & Wellness',
+  icon: Zap,
+  colorClass: 'text-red-600 border-red-600'
+},
+{
+  id: 'ai-legal',
+  name: 'AI Legal Tools',
+  icon: Briefcase,
+  colorClass: 'text-purple-700 border-purple-700'
+}
 ];
 
 // --- 2. TOOL DATA ---
@@ -2606,4 +2642,893 @@ export const INITIAL_TOOLS: Tool[] = [
     tags: ['Freemium', 'Scientific Content', 'Technical'],
     logoUrl: 'https://placehold.co/40x40/DC2626/FFFFFF?text=QK',
   },
+  {
+  id: 276,
+  name: 'Smallpdf',
+  description: 'Free online PDF tools for editing, converting, and compressing PDFs.',
+  categoryId: 'ai-pdf',
+  link: 'https://smallpdf.com/',
+  tags: ['Free', 'PDF Editing', 'Conversion'],
+  logoUrl: 'https://placehold.co/40x40/FF6B6B/FFFFFF?text=SP'
+},
+{
+  id: 277,
+  name: 'ILovePDF',
+  description: 'Free PDF tools for merging, splitting, and compressing PDF files.',
+  categoryId: 'ai-pdf',
+  link: 'https://www.ilovepdf.com/',
+  tags: ['Free', 'PDF Manipulation', 'Tools'],
+  logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=IL'
+},
+{
+  id: 278,
+  name: 'PDF24',
+  description: 'Completely free PDF tools with AI-powered features.',
+  categoryId: 'ai-pdf',
+  link: 'https://tools.pdf24.com/',
+  tags: ['Free', 'PDF Tools', 'AI Features'],
+  logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=P24'
+},
+{
+  id: 279,
+  name: 'Soda PDF Online',
+  description: 'Free online PDF editor and converter with AI capabilities.',
+  categoryId: 'ai-pdf',
+  link: 'https://online.sodapdf.com/',
+  tags: ['Free', 'PDF Editor', 'Online'],
+  logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=SOD'
+},
+
+// --- AI Excel & Spreadsheet Tools (Free) ---
+{
+  id: 280,
+  name: 'Excel Formula Bot',
+  description: 'Free AI tool for generating Excel formulas from text descriptions.',
+  categoryId: 'ai-excel',
+  link: 'https://excelformulabot.com/',
+  tags: ['Free', 'Excel Formulas', 'AI Generation'],
+  logoUrl: 'https://placehold.co/40x40/217346/FFFFFF?text=EFB'
+},
+{
+  id: 281,
+  name: 'Sheet+',
+  description: 'AI-powered Google Sheets and Excel formula generator.',
+  categoryId: 'ai-excel',
+  link: 'https://sheetplus.ai/',
+  tags: ['Free', 'Sheets Formulas', 'Google Sheets'],
+  logoUrl: 'https://placehold.co/40x40/34A853/FFFFFF?text=S+'
+},
+{
+  id: 282,
+  name: 'AI Excel Bot',
+  description: 'Free AI assistant for Excel tasks and formula generation.',
+  categoryId: 'ai-excel',
+  link: 'https://aiexcelbot.com/',
+  tags: ['Free', 'Excel Assistant', 'Automation'],
+  logoUrl: 'https://placehold.co/40x40/217346/FFFFFF?text=AEB'
+},
+{
+  id: 283,
+  name: 'SheetAI',
+  description: 'AI-powered Google Sheets add-on for automation.',
+  categoryId: 'ai-excel',
+  link: 'https://sheetai.app/',
+  tags: ['Free', 'Google Sheets', 'Automation'],
+  logoUrl: 'https://placehold.co/40x40/34A853/FFFFFF?text=SAI'
+},
+
+// --- AI Presentation Tools (Free) ---
+{
+  id: 284,
+  name: 'Canva Presentations',
+  description: 'Free AI-powered presentation tool with templates.',
+  categoryId: 'ai-presentation-free',
+  link: 'https://www.canva.com/presentations/',
+  tags: ['Free', 'Templates', 'Design'],
+  logoUrl: 'https://placehold.co/40x40/00C4CC/FFFFFF?text=CP'
+},
+{
+  id: 285,
+  name: 'Google Slides',
+  description: 'Free presentation tool with AI-powered features.',
+  categoryId: 'ai-presentation-free',
+  link: 'https://slides.google.com/',
+  tags: ['Free', 'Collaboration', 'Google Workspace'],
+  logoUrl: 'https://placehold.co/40x40/4285F4/FFFFFF?text=GS'
+},
+{
+  id: 286,
+  name: 'Prezi',
+  description: 'Free AI-powered presentation platform with zooming interface.',
+  categoryId: 'ai-presentation-free',
+  link: 'https://prezi.com/',
+  tags: ['Free', 'Zooming Interface', 'Dynamic'],
+  logoUrl: 'https://placehold.co/40x40/3181FF/FFFFFF?text=PZ'
+},
+{
+  id: 287,
+  name: 'Pitch',
+  description: 'Free presentation software with AI design suggestions.',
+  categoryId: 'ai-presentation-free',
+  link: 'https://pitch.com/',
+  tags: ['Free', 'Design Suggestions', 'Collaboration'],
+  logoUrl: 'https://placehold.co/40x40/0066FF/FFFFFF?text=PT'
+},
+
+// --- AI SEO Tools (Free) ---
+{
+  id: 288,
+  name: 'Ubersuggest',
+  description: 'Free SEO tool for keyword research and competitor analysis.',
+  categoryId: 'ai-seo-free',
+  link: 'https://neilpatel.com/ubersuggest/',
+  tags: ['Free', 'Keyword Research', 'Competitor Analysis'],
+  logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=US'
+},
+{
+  id: 289,
+  name: 'Google Keyword Planner',
+  description: 'Free keyword research tool from Google Ads.',
+  categoryId: 'ai-seo-free',
+  link: 'https://ads.google.com/home/tools/keyword-planner/',
+  tags: ['Free', 'Keyword Research', 'Google'],
+  logoUrl: 'https://placehold.co/40x40/4285F4/FFFFFF?text=GKP'
+},
+{
+  id: 290,
+  name: 'SEMrush Free Version',
+  description: 'Limited free version of SEMrush for SEO analysis.',
+  categoryId: 'ai-seo-free',
+  link: 'https://www.semrush.com/',
+  tags: ['Free', 'SEO Analysis', 'Limited Features'],
+  logoUrl: 'https://placehold.co/40x40/FF6B6B/FFFFFF?text=SR'
+},
+{
+  id: 291,
+  name: 'Google Search Console',
+  description: 'Free tool for monitoring website performance in Google search.',
+  categoryId: 'ai-seo-free',
+  link: 'https://search.google.com/search-console/',
+  tags: ['Free', 'Performance Monitoring', 'Google'],
+  logoUrl: 'https://placehold.co/40x40/4285F4/FFFFFF?text=GSC'
+},
+{
+  id: 292,
+  name: 'AnswerThePublic',
+  description: 'Free tool for finding questions people ask about topics.',
+  categoryId: 'ai-seo-free',
+  link: 'https://answerthepublic.com/',
+  tags: ['Free', 'Question Research', 'Content Ideas'],
+  logoUrl: 'https://placehold.co/40x40/8B5CF6/FFFFFF?text=ATP'
+},
+
+// --- AI Education & Learning (Free) ---
+{
+  id: 293,
+  name: 'Khan Academy',
+  description: 'Free online learning platform with AI-powered recommendations.',
+  categoryId: 'ai-education',
+  link: 'https://www.khanacademy.org/',
+  tags: ['Free', 'Online Learning', 'Personalized'],
+  logoUrl: 'https://placehold.co/40x40/14BF96/FFFFFF?text=KA'
+},
+{
+  id: 294,
+  name: 'Duolingo',
+  description: 'Free language learning app with AI-powered lessons.',
+  categoryId: 'ai-education',
+  link: 'https://www.duolingo.com/',
+  tags: ['Free', 'Language Learning', 'Gamified'],
+  logoUrl: 'https://placehold.co/40x40/58CC02/FFFFFF?text=DL'
+},
+{
+  id: 295,
+  name: 'Coursera (Free Courses)',
+  description: 'Free courses from top universities with AI content.',
+  categoryId: 'ai-education',
+  link: 'https://www.coursera.org/',
+  tags: ['Free Courses', 'University Content', 'AI Learning'],
+  logoUrl: 'https://placehold.co/40x40/0056D2/FFFFFF?text=CR'
+},
+{
+  id: 296,
+  name: 'edX (Free Courses)',
+  description: 'Free online courses from universities worldwide.',
+  categoryId: 'ai-education',
+  link: 'https://www.edx.org/',
+  tags: ['Free Courses', 'University', 'Certificates'],
+  logoUrl: 'https://placehold.co/40x40/02262B/FFFFFF?text=ED'
+},
+{
+  id: 297,
+  name: 'Quizlet',
+  description: 'Free AI-powered flashcards and learning tools.',
+  categoryId: 'ai-education',
+  link: 'https://quizlet.com/',
+  tags: ['Free', 'Flashcards', 'Study Tools'],
+  logoUrl: 'https://placehold.co/40x40/4257B2/FFFFFF?text=QT'
+},
+
+// --- AI Health & Wellness (Free) ---
+{
+  id: 298,
+  name: 'MyFitnessPal',
+  description: 'Free AI-powered nutrition and fitness tracking app.',
+  categoryId: 'ai-health',
+  link: 'https://www.myfitnesspal.com/',
+  tags: ['Free', 'Nutrition', 'Fitness Tracking'],
+  logoUrl: 'https://placehold.co/40x40/009639/FFFFFF?text=MFP'
+},
+{
+  id: 299,
+  name: 'Headspace (Free Version)',
+  description: 'Free meditation and mindfulness app with AI guidance.',
+  categoryId: 'ai-health',
+  link: 'https://www.headspace.com/',
+  tags: ['Free Version', 'Meditation', 'Mindfulness'],
+  logoUrl: 'https://placehold.co/40x40/F58A0F/FFFFFF?text=HS'
+},
+{
+  id: 300,
+  name: 'Nike Training Club',
+  description: 'Free AI-powered workout and training app.',
+  categoryId: 'ai-health',
+  link: 'https://www.nike.com/ntc-app',
+  tags: ['Free', 'Workouts', 'Training'],
+  logoUrl: 'https://placehold.co/40x40/000000/FFFFFF?text=NTC'
+},
+{
+  id: 301,
+  name: 'Ada Health',
+  description: 'Free AI-powered health assessment and symptom checker.',
+  categoryId: 'ai-health',
+  link: 'https://ada.com/',
+  tags: ['Free', 'Health Assessment', 'Symptom Checker'],
+  logoUrl: 'https://placehold.co/40x40/00B2FF/FFFFFF?text=ADA'
+},
+
+// --- AI Legal Tools (Free) ---
+{
+  id: 302,
+  name: 'DoNotPay',
+  description: 'Free AI legal assistant for fighting corporations and bureaucracy.',
+  categoryId: 'ai-legal',
+  link: 'https://donotpay.com/',
+  tags: ['Free', 'Legal Assistant', 'Consumer Rights'],
+  logoUrl: 'https://placehold.co/40x40/000000/FFFFFF?text=DNP'
+},
+{
+  id: 303,
+  name: 'LegalZoom Free Resources',
+  description: 'Free legal documents and AI-powered legal guidance.',
+  categoryId: 'ai-legal',
+  link: 'https://www.legalzoom.com/',
+  tags: ['Free Resources', 'Legal Documents', 'Guidance'],
+  logoUrl: 'https://placehold.co/40x40/0056D2/FFFFFF?text=LZ'
+},
+{
+  id: 304,
+  name: 'Rocket Lawyer Free Templates',
+  description: 'Free legal document templates with AI assistance.',
+  categoryId: 'ai-legal',
+  link: 'https://www.rocketlawyer.com/',
+  tags: ['Free Templates', 'Legal Documents', 'AI Assistance'],
+  logoUrl: 'https://placehold.co/40x40/FF6B6B/FFFFFF?text=RL'
+},
+
+// --- Additional Free AI Tools ---
+{
+  id: 305,
+  name: 'Remove.bg',
+  description: 'Free AI tool for removing image backgrounds automatically.',
+  categoryId: 'ai-design',
+  link: 'https://www.remove.bg/',
+  tags: ['Free', 'Background Removal', 'Image Editing'],
+  logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=RBG'
+},
+{
+  id: 306,
+  name: 'Unsplash',
+  description: 'Free AI-curated stock photography platform.',
+  categoryId: 'ai-design',
+  link: 'https://unsplash.com/',
+  tags: ['Free', 'Stock Photos', 'AI Curation'],
+  logoUrl: 'https://placehold.co/40x40/000000/FFFFFF?text=UN'
+},
+{
+  id: 307,
+  name: 'Pexels',
+  description: 'Free stock photos and videos with AI-powered search.',
+  categoryId: 'ai-design',
+  link: 'https://www.pexels.com/',
+  tags: ['Free', 'Stock Media', 'AI Search'],
+  logoUrl: 'https://placehold.co/40x40/05A081/FFFFFF?text=PX'
+},
+{
+  id: 308,
+  name: 'Pixabay',
+  description: 'Free images, videos, and music with AI recommendations.',
+  categoryId: 'ai-design',
+  link: 'https://pixabay.com/',
+  tags: ['Free', 'Stock Media', 'AI Recommendations'],
+  logoUrl: 'https://placehold.co/40x40/2EC66E/FFFFFF?text=PB'
+},
+// --- AI Chatbots & Text Generation (Open Source) ---
+{
+  id: 309,
+  name: 'Ollama',
+  description: 'Open-source framework for running large language models locally on your machine.',
+  categoryId: 'ai-chatbots',
+  link: 'https://ollama.ai/',
+  tags: ['Free', 'Open Source', 'Local AI', 'Self-hosted'],
+  logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=OL'
+},
+{
+  id: 310,
+  name: 'LocalAI',
+  description: 'Open-source, self-hosted alternative to OpenAI APIs, compatible with multiple models.',
+  categoryId: 'ai-chatbots',
+  link: 'https://localai.io/',
+  tags: ['Free', 'Open Source', 'Self-hosted', 'API Compatible'],
+  logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=LA'
+},
+{
+  id: 311,
+  name: 'GPT4All',
+  description: 'Open-source ecosystem of locally running large language models.',
+  categoryId: 'ai-chatbots',
+  link: 'https://gpt4all.io/',
+  tags: ['Free', 'Open Source', 'Local AI', 'Privacy-focused'],
+  logoUrl: 'https://placehold.co/40x40/8B5CF6/FFFFFF?text=G4A'
+},
+{
+  id: 312,
+  name: 'Llama.cpp',
+  description: 'Port of Facebook\'s LLaMA model in C/C++ for efficient CPU inference.',
+  categoryId: 'ai-chatbots',
+  link: 'https://github.com/ggerganov/llama.cpp',
+  tags: ['Free', 'Open Source', 'C/C++', 'CPU Inference'],
+  logoUrl: 'https://placehold.co/40x40/000000/FFFFFF?text=LC'
+},
+
+// --- AI Design & Image Generation (Open Source) ---
+{
+  id: 313,
+  name: 'Automatic1111 WebUI',
+  description: 'Popular open-source web interface for Stable Diffusion with extensive features.',
+  categoryId: 'ai-design',
+  link: 'https://github.com/AUTOMATIC1111/stable-diffusion-webui',
+  tags: ['Free', 'Open Source', 'Stable Diffusion', 'Web Interface'],
+  logoUrl: 'https://placehold.co/40x40/6366F1/FFFFFF?text=A11'
+},
+{
+  id: 314,
+  name: 'ComfyUI',
+  description: 'Powerful and modular stable diffusion GUI with node-based interface.',
+  categoryId: 'ai-design',
+  link: 'https://github.com/comfyanonymous/ComfyUI',
+  tags: ['Free', 'Open Source', 'Node-based', 'Modular'],
+  logoUrl: 'https://placehold.co/40x40/EC4899/FFFFFF?text=CUI'
+},
+{
+  id: 315,
+  name: 'InvokeAI',
+  description: 'Professional creative workflow for stable diffusion, focused on artists.',
+  categoryId: 'ai-design',
+  link: 'https://github.com/invoke-ai/InvokeAI',
+  tags: ['Free', 'Open Source', 'Creative Workflow', 'Artists'],
+  logoUrl: 'https://placehold.co/40x40/06B6D4/FFFFFF?text=IAI'
+},
+{
+  id: 316,
+  name: 'Diffusers',
+  description: 'Hugging Face library for state-of-the-art pretrained diffusion models.',
+  categoryId: 'ai-design',
+  link: 'https://github.com/huggingface/diffusers',
+  tags: ['Free', 'Open Source', 'Hugging Face', 'Python Library'],
+  logoUrl: 'https://placehold.co/40x40/FFD21E/000000?text=DF'
+},
+
+// --- AI Video Generation & Editing (Open Source) ---
+{
+  id: 317,
+  name: 'ComfyUI Video Helper',
+  description: 'Open-source video generation and editing tools built on ComfyUI.',
+  categoryId: 'ai-video',
+  link: 'https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite',
+  tags: ['Free', 'Open Source', 'Video Generation', 'ComfyUI'],
+  logoUrl: 'https://placehold.co/40x40/8B5CF6/FFFFFF?text=CVH'
+},
+{
+  id: 318,
+  name: 'Flowframes',
+  description: 'Open-source AI frame interpolation for smooth slow-motion videos.',
+  categoryId: 'ai-video',
+  link: 'https://github.com/n00mkrad/flowframes',
+  tags: ['Free', 'Open Source', 'Frame Interpolation', 'Slow-motion'],
+  logoUrl: 'https://placehold.co/40x40/06B6D4/FFFFFF?text=FF'
+},
+
+// --- AI Coding Assistance (Open Source) ---
+{
+  id: 319,
+  name: 'Continue',
+  description: 'Open-source autopilot for VS Code and JetBrains, extensible and private.',
+  categoryId: 'ai-coding',
+  link: 'https://continue.dev/',
+  tags: ['Free', 'Open Source', 'VS Code', 'JetBrains'],
+  logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=CT'
+},
+{
+  id: 320,
+  name: 'Aider',
+  description: 'AI pair programming in your terminal, open-source and git-integrated.',
+  categoryId: 'ai-coding',
+  link: 'https://github.com/paul-gauthier/aider',
+  tags: ['Free', 'Open Source', 'Terminal', 'Git Integration'],
+  logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=AD'
+},
+{
+  id: 321,
+  name: 'Open Interpreter',
+  description: 'Open-source code interpreter that runs on your computer.',
+  categoryId: 'ai-coding',
+  link: 'https://github.com/KillianLucas/open-interpreter',
+  tags: ['Free', 'Open Source', 'Code Interpreter', 'Local'],
+  logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=OI'
+},
+{
+  id: 322,
+  name: 'Windsurf',
+  description: 'Open-source AI-native code editor with deep AI integration.',
+  categoryId: 'ai-coding',
+  link: 'https://github.com/windsurf-ai/windsurf',
+  tags: ['Free', 'Open Source', 'Code Editor', 'AI-native'],
+  logoUrl: 'https://placehold.co/40x40/06B6D4/FFFFFF?text=WS'
+},
+
+// --- AI Research & Knowledge (Open Source) ---
+{
+  id: 323,
+  name: 'OpenWebUI',
+  description: 'Open-source web UI for LLMs, supporting multiple model backends.',
+  categoryId: 'ai-research',
+  link: 'https://github.com/open-webui/open-webui',
+  tags: ['Free', 'Open Source', 'Web UI', 'Multi-backend'],
+  logoUrl: 'https://placehold.co/40x40/8B5CF6/FFFFFF?text=OW'
+},
+{
+  id: 324,
+  name: 'AnythingLLM',
+  description: 'Open-source document chatbot that can reference any provided context.',
+  categoryId: 'ai-research',
+  link: 'https://github.com/Mintplex-Labs/anything-llm',
+  tags: ['Free', 'Open Source', 'Document Chat', 'Context-aware'],
+  logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=ALL'
+},
+{
+  id: 325,
+  name: 'PrivateGPT',
+  description: 'Interact privately with your documents using the power of GPT, 100% offline.',
+  categoryId: 'ai-research',
+  link: 'https://github.com/imartinez/privateGPT',
+  tags: ['Free', 'Open Source', 'Offline', 'Document Analysis'],
+  logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=PG'
+},
+
+// --- AI Productivity & Scheduling (Open Source) ---
+{
+  id: 326,
+  name: 'OpenDevin',
+  description: 'Open-source alternative to Devin, the AI software engineer.',
+  categoryId: 'ai-productivity',
+  link: 'https://github.com/OpenDevin/OpenDevin',
+  tags: ['Free', 'Open Source', 'AI Engineer', 'Development'],
+  logoUrl: 'https://placehold.co/40x40/DC2626/FFFFFF?text=OD'
+},
+{
+  id: 327,
+  name: 'SuperAGI',
+  description: 'Open-source framework for building and deploying autonomous AI agents.',
+  categoryId: 'ai-productivity',
+  link: 'https://github.com/TransformerOptimus/SuperAGI',
+  tags: ['Free', 'Open Source', 'AI Agents', 'Autonomous'],
+  logoUrl: 'https://placehold.co/40x40/8B5CF6/FFFFFF?text=SA'
+},
+
+// --- AI Music Generation (Open Source) ---
+{
+  id: 328,
+  name: 'Muzic',
+  description: 'Microsoft Research AI music understanding and generation toolkit.',
+  categoryId: 'ai-music',
+  link: 'https://github.com/microsoft/muzic',
+  tags: ['Free', 'Open Source', 'Microsoft Research', 'Music AI'],
+  logoUrl: 'https://placehold.co/40x40/0078D4/FFFFFF?text=MZ'
+},
+{
+  id: 329,
+  name: 'AudioCraft',
+  description: 'Meta\'s open-source audio and music generation library.',
+  categoryId: 'ai-music',
+  link: 'https://github.com/facebookresearch/audiocraft',
+  tags: ['Free', 'Open Source', 'Meta', 'Audio Generation'],
+  logoUrl: 'https://placehold.co/40x40/1877F2/FFFFFF?text=AC'
+},
+
+// --- AI Education & Learning (Open Source) ---
+{
+  id: 330,
+  name: 'OpenAssistant',
+  description: 'Open-source AI assistant project focused on conversational AI.',
+  categoryId: 'ai-education',
+  link: 'https://github.com/LAION-AI/Open-Assistant',
+  tags: ['Free', 'Open Source', 'Conversational AI', 'Community'],
+  logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=OA'
+},
+
+// --- AI Data Visualization (Open Source) ---
+{
+  id: 331,
+  name: 'Apache Superset',
+  description: 'Open-source data exploration and visualization platform.',
+  categoryId: 'ai-data-vis',
+  link: 'https://superset.apache.org/',
+  tags: ['Free', 'Open Source', 'Data Exploration', 'Apache'],
+  logoUrl: 'https://placehold.co/40x40/DC2626/FFFFFF?text=AS'
+},
+{
+  id: 332,
+  name: 'Metabase',
+  description: 'Open-source business intelligence and data visualization tool.',
+  categoryId: 'ai-data-vis',
+  link: 'https://www.metabase.com/',
+  tags: ['Free', 'Open Source', 'Business Intelligence', 'Analytics'],
+  logoUrl: 'https://placehold.co/40x40/509EE3/FFFFFF?text=MB'
+},
+
+// --- AI PDF Tools (Open Source) ---
+{
+  id: 333,
+  name: 'Stirling-PDF',
+  description: 'Open-source locally hosted web-based PDF manipulation tool.',
+  categoryId: 'ai-pdf',
+  link: 'https://github.com/Stirling-Tools/Stirling-PDF',
+  tags: ['Free', 'Open Source', 'PDF Manipulation', 'Self-hosted'],
+  logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=SP'
+},
+{
+  id: 334,
+  name: 'OCRmyPDF',
+  description: 'Open-source tool to add OCR text layer to scanned PDF files.',
+  categoryId: 'ai-pdf',
+  link: 'https://github.com/ocrmypdf/OCRmyPDF',
+  tags: ['Free', 'Open Source', 'OCR', 'PDF Processing'],
+  logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=OP'
+},
+
+// --- AI Spreadsheet Tools (Open Source) ---
+{
+  id: 335,
+  name: 'Grist',
+  description: 'Open-source spreadsheet with the power of a database.',
+  categoryId: 'ai-spreadsheet',
+  link: 'https://github.com/gristlabs/grist-core',
+  tags: ['Free', 'Open Source', 'Spreadsheet', 'Database'],
+  logoUrl: 'https://placehold.co/40x40/8B5CF6/FFFFFF?text=GR'
+},
+
+// --- AI Meeting Notes (Open Source) ---
+{
+  id: 336,
+  name: 'OpenWebMeeting',
+  description: 'Open-source web conferencing and meeting platform.',
+  categoryId: 'ai-meeting-notes',
+  link: 'https://github.com/OpenWebMeeting/OpenWebMeeting',
+  tags: ['Free', 'Open Source', 'Web Conferencing', 'Meetings'],
+  logoUrl: 'https://placehold.co/40x40/06B6D4/FFFFFF?text=OWM'
+},
+
+// --- AI Chrome Extensions (Open Source) ---
+{
+  id: 337,
+  name: 'ChatGPT Box',
+  description: 'Open-source browser extension that integrates ChatGPT everywhere.',
+  categoryId: 'ai-chrome-extensions',
+  link: 'https://github.com/josStorer/chatGPTBox',
+  tags: ['Free', 'Open Source', 'Browser Extension', 'ChatGPT'],
+  logoUrl: 'https://placehold.co/40x40/10A37F/FFFFFF?text=CGB'
+},
+
+// --- AI Social Media Management (Open Source) ---
+{
+  id: 338,
+  name: 'Socialhome',
+  description: 'Open-source federated social network and profile builder.',
+  categoryId: 'ai-social-media',
+  link: 'https://github.com/jaywink/socialhome',
+  tags: ['Free', 'Open Source', 'Federated', 'Social Network'],
+  logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=SH'
+},
+
+// --- AI Health & Wellness (Open Source) ---
+{
+  id: 339,
+  name: 'OpenMRS',
+  description: 'Open-source medical record system platform.',
+  categoryId: 'ai-health',
+  link: 'https://github.com/openmrs/openmrs-core',
+  tags: ['Free', 'Open Source', 'Medical Records', 'Healthcare'],
+  logoUrl: 'https://placehold.co/40x40/DC2626/FFFFFF?text=OM'
+},
+
+// --- AI Legal Tools (Open Source) ---
+{
+  id: 340,
+  name: 'Docassemble',
+  description: 'Open-source expert system for guided interviews and document assembly.',
+  categoryId: 'ai-legal',
+  link: 'https://github.com/jhpyle/docassemble',
+  tags: ['Free', 'Open Source', 'Legal Documents', 'Expert System'],
+  logoUrl: 'https://placehold.co/40x40/8B5CF6/FFFFFF?text=DA'
+},
+// --- AI Content Creation (Open Source) ---
+{
+  id: 341,
+  name: 'Novel',
+  description: 'Open-source Notion-style WYSIWYG editor with AI-powered autocompletion.',
+  categoryId: 'ai-content',
+  link: 'https://github.com/steven-tey/novel',
+  tags: ['Free', 'Open Source', 'WYSIWYG', 'Notion-style'],
+  logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=NV'
+},
+{
+  id: 342,
+  name: 'LibreChat',
+  description: 'Open-source AI conversation platform supporting multiple AI providers.',
+  categoryId: 'ai-content',
+  link: 'https://github.com/danny-avila/LibreChat',
+  tags: ['Free', 'Open Source', 'Conversation Platform', 'Multi-provider'],
+  logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=LC'
+},
+{
+  id: 343,
+  name: 'Chatbot-UI',
+  description: 'Open-source chat interface for AI models, inspired by ChatGPT.',
+  categoryId: 'ai-content',
+  link: 'https://github.com/mckaywrigley/chatbot-ui',
+  tags: ['Free', 'Open Source', 'Chat Interface', 'ChatGPT-inspired'],
+  logoUrl: 'https://placehold.co/40x40/8B5CF6/FFFFFF?text=CUI'
+},
+
+// --- AI for Business & Marketing (Open Source) ---
+{
+  id: 344,
+  name: 'Erxes',
+  description: 'Open-source growth marketing platform with AI features.',
+  categoryId: 'ai-business',
+  link: 'https://github.com/erxes/erxes',
+  tags: ['Free', 'Open Source', 'Growth Marketing', 'CRM'],
+  logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=EX'
+},
+{
+  id: 345,
+  name: 'Odoo',
+  description: 'Open-source business management software with AI integrations.',
+  categoryId: 'ai-business',
+  link: 'https://github.com/odoo/odoo',
+  tags: ['Free', 'Open Source', 'Business Management', 'ERP'],
+  logoUrl: 'https://placehold.co/40x40/714B67/FFFFFF?text=OD'
+},
+{
+  id: 346,
+  name: 'Saleor',
+  description: 'Open-source e-commerce platform with AI-powered recommendations.',
+  categoryId: 'ai-business',
+  link: 'https://github.com/saleor/saleor',
+  tags: ['Free', 'Open Source', 'E-commerce', 'Recommendations'],
+  logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=SL'
+},
+
+// --- AI Presentations & Slides (Open Source) ---
+{
+  id: 347,
+  name: 'Reveal.js',
+  description: 'Open-source HTML presentation framework with AI content integration.',
+  categoryId: 'ai-presentations',
+  link: 'https://github.com/hakimel/reveal.js',
+  tags: ['Free', 'Open Source', 'HTML Presentations', 'Framework'],
+  logoUrl: 'https://placehold.co/40x40/FF6B6B/FFFFFF?text=RJ'
+},
+{
+  id: 348,
+  name: 'Impress.js',
+  description: 'Open-source presentation tool inspired by Prezi, with AI enhancements.',
+  categoryId: 'ai-presentations',
+  link: 'https://github.com/impress/impress.js',
+  tags: ['Free', 'Open Source', 'Prezi-style', 'Interactive'],
+  logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=IJ'
+},
+
+// --- AI Email Assistance (Open Source) ---
+{
+  id: 349,
+  name: 'Nylas',
+  description: 'Open-source email, calendar, and contacts platform with AI capabilities.',
+  categoryId: 'ai-email',
+  link: 'https://github.com/nylas/nylas-node',
+  tags: ['Free', 'Open Source', 'Email API', 'Calendar'],
+  logoUrl: 'https://placehold.co/40x40/06B6D4/FFFFFF?text=NY'
+},
+{
+  id: 350,
+  name: 'Mailtrain',
+  description: 'Open-source self-hosted newsletter application with AI optimization.',
+  categoryId: 'ai-email',
+  link: 'https://github.com/Mailtrain-org/mailtrain',
+  tags: ['Free', 'Open Source', 'Newsletter', 'Self-hosted'],
+  logoUrl: 'https://placehold.co/40x40/8B5CF6/FFFFFF?text=MT'
+},
+
+// --- AI Spreadsheet Tools (Open Source) ---
+{
+  id: 351,
+  name: 'LuckySheet',
+  description: 'Open-source online spreadsheet like Excel, with AI formula assistance.',
+  categoryId: 'ai-spreadsheet',
+  link: 'https://github.com/dream-num/Luckysheet',
+  tags: ['Free', 'Open Source', 'Online Spreadsheet', 'Excel-like'],
+  logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=LS'
+},
+
+// --- AI YouTube Tools (Open Source) ---
+{
+  id: 352,
+  name: 'yt-dlp',
+  description: 'Open-source YouTube video downloader with AI metadata extraction.',
+  categoryId: 'ai-youtube',
+  link: 'https://github.com/yt-dlp/yt-dlp',
+  tags: ['Free', 'Open Source', 'Video Downloader', 'Metadata'],
+  logoUrl: 'https://placehold.co/40x40/FF0000/FFFFFF?text=YD'
+},
+{
+  id: 353,
+  name: 'TubeArchivist',
+  description: 'Open-source self-hosted YouTube media server with AI organization.',
+  categoryId: 'ai-youtube',
+  link: 'https://github.com/tubearchivist/tubearchivist',
+  tags: ['Free', 'Open Source', 'Media Server', 'Self-hosted'],
+  logoUrl: 'https://placehold.co/40x40/FF6B6B/FFFFFF?text=TA'
+},
+
+// --- AI SEO Tools (Open Source) ---
+{
+  id: 354,
+  name: 'SERP API',
+  description: 'Open-source search engine results page API with AI analysis.',
+  categoryId: 'ai-seo',
+  link: 'https://github.com/serpapi/serpapi-node',
+  tags: ['Free', 'Open Source', 'SERP', 'Search Analysis'],
+  logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=SA'
+},
+{
+  id: 355,
+  name: 'SEO-Audits',
+  description: 'Open-source SEO audit tool with AI-powered recommendations.',
+  categoryId: 'ai-seo',
+  link: 'https://github.com/arturspk/seo-audits',
+  tags: ['Free', 'Open Source', 'SEO Audit', 'Recommendations'],
+  logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=SEO'
+},
+
+// --- AI Sales Tools (Open Source) ---
+{
+  id: 356,
+  name: 'SuiteCRM',
+  description: 'Open-source CRM with AI-powered sales automation and analytics.',
+  categoryId: 'ai-sales',
+  link: 'https://github.com/salesagility/SuiteCRM',
+  tags: ['Free', 'Open Source', 'CRM', 'Sales Automation'],
+  logoUrl: 'https://placehold.co/40x40/DC2626/FFFFFF?text=SC'
+},
+{
+  id: 357,
+  name: 'OroCRM',
+  description: 'Open-source B2B CRM with AI-driven sales intelligence.',
+  categoryId: 'ai-sales',
+  link: 'https://github.com/orocrm/orocrm',
+  tags: ['Free', 'Open Source', 'B2B CRM', 'Sales Intelligence'],
+  logoUrl: 'https://placehold.co/40x40/8B5CF6/FFFFFF?text=OC'
+},
+
+// --- AI for Daily Life (Open Source) ---
+{
+  id: 358,
+  name: 'Home Assistant',
+  description: 'Open-source home automation with AI-powered smart home features.',
+  categoryId: 'ai-daily-life',
+  link: 'https://github.com/home-assistant/core',
+  tags: ['Free', 'Open Source', 'Home Automation', 'Smart Home'],
+  logoUrl: 'https://placehold.co/40x40/41BDF5/FFFFFF?text=HA'
+},
+{
+  id: 359,
+  name: 'Mycroft AI',
+  description: 'Open-source voice assistant for daily tasks and home automation.',
+  categoryId: 'ai-daily-life',
+  link: 'https://github.com/MycroftAI/mycroft-core',
+  tags: ['Free', 'Open Source', 'Voice Assistant', 'Privacy-focused'],
+  logoUrl: 'https://placehold.co/40x40/00B2FF/FFFFFF?text=MA'
+},
+
+// --- AI Writing Tools (Open Source) ---
+{
+  id: 360,
+  name: 'Outline',
+  description: 'Open-source team knowledge base and wiki with AI writing assistance.',
+  categoryId: 'ai-writing',
+  link: 'https://github.com/outline/outline',
+  tags: ['Free', 'Open Source', 'Knowledge Base', 'Team Wiki'],
+  logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=OL'
+},
+{
+  id: 361,
+  name: 'BookStack',
+  description: 'Open-source platform for documentation and writing with AI features.',
+  categoryId: 'ai-writing',
+  link: 'https://github.com/BookStackApp/BookStack',
+  tags: ['Free', 'Open Source', 'Documentation', 'Platform'],
+  logoUrl: 'https://placehold.co/40x40/10B981/FFFFFF?text=BS'
+},
+
+// --- AI Email Marketing (Open Source) ---
+{
+  id: 362,
+  name: 'Mautic',
+  description: 'Open-source marketing automation with AI-powered email campaigns.',
+  categoryId: 'ai-email-marketing',
+  link: 'https://github.com/mautic/mautic',
+  tags: ['Free', 'Open Source', 'Marketing Automation', 'Campaigns'],
+  logoUrl: 'https://placehold.co/40x40/5D3FD3/FFFFFF?text=MT'
+},
+{
+  id: 363,
+  name: 'SendPortal',
+  description: 'Open-source self-hosted email marketing platform with AI analytics.',
+  categoryId: 'ai-email-marketing',
+  link: 'https://github.com/mettle/sendportal',
+  tags: ['Free', 'Open Source', 'Email Marketing', 'Self-hosted'],
+  logoUrl: 'https://placehold.co/40x40/EF4444/FFFFFF?text=SP'
+},
+
+// --- AI Excel & Spreadsheet Tools (Open Source) ---
+{
+  id: 364,
+  name: 'EtherCalc',
+  description: 'Open-source web spreadsheet with real-time collaboration and AI formulas.',
+  categoryId: 'ai-excel',
+  link: 'https://github.com/audreyt/ethercalc',
+  tags: ['Free', 'Open Source', 'Web Spreadsheet', 'Real-time'],
+  logoUrl: 'https://placehold.co/40x40/8B5CF6/FFFFFF?text=EC'
+},
+
+// --- AI Presentation Tools (Free) (Open Source) ---
+{
+  id: 365,
+  name: 'Deckset',
+  description: 'Open-source Markdown to presentation converter with AI design suggestions.',
+  categoryId: 'ai-presentation-free',
+  link: 'https://github.com/deckset/app',
+  tags: ['Free', 'Open Source', 'Markdown', 'Presentation'],
+  logoUrl: 'https://placehold.co/40x40/06B6D4/FFFFFF?text=DK'
+},
+{
+  id: 366,
+  name: 'Marp',
+  description: 'Open-source Markdown presentation ecosystem with AI themes.',
+  categoryId: 'ai-presentation-free',
+  link: 'https://github.com/marp-team/marp',
+  tags: ['Free', 'Open Source', 'Markdown', 'Themes'],
+  logoUrl: 'https://placehold.co/40x40/3B82F6/FFFFFF?text=MP'
+},
 ];

@@ -6,18 +6,28 @@ import { INITIAL_TOOLS } from '@/data/tools';
 import { ToolCard } from '@/components/ToolCard';
 import { CategoryFilter } from '@/components/CategoryFilter'; // Correct named import
 
+// I define the possible cost options based on the available tags
+const COST_OPTIONS = ['all', 'Free', 'Freemium', 'Paid', 'Open Source'];
+
 // My main Next.js page component
 // I assume Tailwind and fonts are correctly configured in layout.tsx and globals.css
 const Page: React.FC = () => {
   const [selectedCategoryId, setSelectedCategoryId] = useState<string>('all');
+  // New state for the cost filter
+  const [selectedCost, setSelectedCost] = useState<string>('all');
 
-  // I dynamically filter tools based on the selected category
+  // I dynamically filter tools based on the selected category AND selected cost
   const filteredTools = useMemo(() => {
-    if (selectedCategoryId === 'all') {
-      return INITIAL_TOOLS;
-    }
-    return INITIAL_TOOLS.filter(tool => tool.categoryId === selectedCategoryId);
-  }, [selectedCategoryId]);
+    return INITIAL_TOOLS.filter(tool => {
+      // 1. Filter by Category
+      const matchesCategory = selectedCategoryId === 'all' || tool.categoryId === selectedCategoryId;
+
+      // 2. Filter by Cost (checking if the tool's tags include the selected cost option)
+      const matchesCost = selectedCost === 'all' || tool.tags.includes(selectedCost);
+
+      return matchesCategory && matchesCost;
+    });
+  }, [selectedCategoryId, selectedCost]); // Dependencies include both filters
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans p-4 sm:p-8">
@@ -34,10 +44,14 @@ const Page: React.FC = () => {
 
       <div className="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto">
         
-        {/* Category Filter */}
+        {/* Category & Cost Filter */}
         <CategoryFilter 
           selectedCategoryId={selectedCategoryId}
           onSelectCategory={setSelectedCategoryId}
+          // New props for cost filter
+          selectedCost={selectedCost}
+          onSelectCost={setSelectedCost}
+          costOptions={COST_OPTIONS}
         />
 
         {/* Tools Grid */}
@@ -53,7 +67,7 @@ const Page: React.FC = () => {
               ))
             ) : (
               <p className="text-gray-500 md:col-span-2 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
-                No tools found for the selected category.
+                No tools found for the selected category or cost filter.
               </p>
             )}
           </div>
