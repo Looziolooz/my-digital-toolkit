@@ -36,7 +36,8 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
         <h3 className="text-xl font-bold text-gray-800">{tool.name}</h3>
       </div>
       
-      <p className="text-gray-600 mb-4 text-sm min-h-[60px]">{tool.description}</p>
+      {/* Removed min-h-[60px] for better space management on mobile */}
+      <p className="text-gray-600 mb-4 text-sm">{tool.description}</p>
       
       <div className="flex flex-wrap gap-2 mb-4">
         {tool.tags.map((tag, index) => (
